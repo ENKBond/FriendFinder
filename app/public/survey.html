@@ -28,7 +28,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 1</strong></h3>
                 <h4>I like to solve complex problems.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q1">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -45,7 +45,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 2</strong></h3>
                 <h4>I prefer variety to routine.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q2">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -62,7 +62,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 3</strong></h3>
                 <h4>I dislike being the center of attention.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q3">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -79,7 +79,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 4</strong></h3>
                 <h4>I fear for the worst.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q4">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -96,7 +96,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 5</strong></h3>
                 <h4>I seek adventure.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q5">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -113,7 +113,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 6</strong></h3>
                 <h4>I enjoy being part of a group.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q6">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -130,7 +130,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 7</strong></h3>
                 <h4>I express childlike joy.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q7">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -147,7 +147,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 8</strong></h3>
                 <h4>I get stressed out easily.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q8">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -164,7 +164,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 9</strong></h3>
                 <h4>I find it easy to stay relaxed under pressure.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q9">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -181,7 +181,7 @@
             <div class="col-sm-6">
                 <h3><strong>Question 10</strong></h3>
                 <h4>I rarely do something out of sheer curiosity.</h4>
-                <select class="custom-select custom-select-sm">
+                <select class="custom-select custom-select-sm" id="q10">
                     <option selected>Open this select menu</option>
                     <option value="1">1 (strongly disagree)</option>
                     <option value="2">2</option>
@@ -195,7 +195,7 @@
         </div>
 
         <div class="text-center">
-            <a class="btn btn-info btn-lg" href="#" role="button">Submit</a>
+            <a class="btn btn-info btn-lg" href="#" role="button" id="submitButton">Submit</a>
         </div>
         
         <footer class="footer">
@@ -206,9 +206,34 @@
                 <br>
             </div>
         </footer>
-            
-
     </div>
+
+<script type="text/javascript">
+
+$("#submitButton").on("click", function(event) {
+    event.preventDefault();
+
+    let newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+            parseInt($("#q1").val()),
+            parseInt($("#q2").val()),
+            parseInt($("#q3").val()),
+            parseInt($("#q4").val()),
+            parseInt($("#q5").val()),
+            parseInt($("#q6").val()),
+            parseInt($("#q7").val()),
+            parseInt($("#q8").val()),
+            parseInt($("#q9").val()),
+            parseInt($("#q10").val()),
+        ]
+    };
+
     
+})
+
+</script>
+
 </body>
 </html>
