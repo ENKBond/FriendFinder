@@ -1,0 +1,15 @@
+#homeBody {
+    background-image: url('./images/pexels-photo-1574650.jpeg');
+}
+
+.display-4, h3 {
+    font-family: 'Dosis', sans-serif;
+}
+
+#survey {
+    font-family: 'Dosis', sans-serif;
+}
+
+#surHead {
+    background-color: lightgray;
+}
