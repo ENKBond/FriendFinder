@@ -1,4 +1,4 @@
-let friends = [
+let friendsArray = [
     {
         name: "Erika",
         photo: "http://2.bp.blogspot.com/-O2bWN_xwAYo/TpbQz3P6s_I/AAAAAAAAEQA/V-W92J6psf4/s1600/byrne-crazycatlady-ins11.jpg",
@@ -16,11 +16,11 @@ let friends = [
         ]
     }
 ];
-console.log(friends);
+console.log(friendsArray);
 
 
 
 
 
 
-module.exports = friends;
+module.exports = friendsArray;

@@ -252,10 +252,8 @@ $("#submitButton").on("click", function(event) {
             parseInt($("#q9").val()),
             parseInt($("#q10").val()),
         ]
-    }
+    };
 
-    friends.push(newFriend);
-    
     $.post("/api/friends", newFriend).then(function(data) {
         console.log(data);
         $("#matchName").text(data.name);
